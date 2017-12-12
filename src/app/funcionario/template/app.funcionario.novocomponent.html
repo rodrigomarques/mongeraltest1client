@@ -1,0 +1,112 @@
+
+<h3 class="page-header">Novo Funcionário</h3>
+
+<form method="post">
+	<div class="row">
+		<div class="col-xs-12 form-group">
+			Nome: 
+			<input type="text" name="nome" class="form-control" [(ngModel)]="f.nome">
+		</div>
+	
+		<div class="col-xs-4 form-group">
+			Cpf: 
+			<input type="text" name="cpf" class="form-control" [(ngModel)]="f.cpf">
+		</div>
+
+		<div class="col-xs-4 form-group">
+			Senha: 
+			<input type="password" name="senha" class="form-control" [(ngModel)]="f.senha">
+		</div>
+
+		<div class="col-xs-4 form-group">
+			Telefone: 
+			<input type="text" name="telefone" class="form-control" [(ngModel)]="f.telefone">
+		</div>
+
+		<div class="col-xs-6 form-group">
+			E-mail: 
+			<input type="email" name="email" class="form-control" [(ngModel)]="f.email">
+		</div>
+
+		<div class="col-xs-6 form-group">
+			Data Nascimento: 
+			<input type="text" name="dtnascimento" class="form-control" [(ngModel)]="f.datanascimento">
+		</div>
+
+		<div class="col-xs-3 form-group">
+			RG: 
+			<input type="text" name="rg" class="form-control" [(ngModel)]="f.rg">
+		</div>
+		<div class="col-xs-3 form-group">
+			Data Expedição: 
+			<input type="text" name="dtexpedicao" class="form-control" [(ngModel)]="f.dataexpedicao">
+		</div>
+		<div class="col-xs-3 form-group">
+			Orgão:
+			<input type="text" name="orgao" class="form-control" [(ngModel)]="f.orgao">
+		</div>
+
+		<div class="col-xs-3 form-group">
+			Estado Civil:
+			<select name="estadocivil" class="form-control" [(ngModel)]="f.estadocivil">
+				<option value="Solteiro">Solteiro</option>
+				<option value="Casado">Casado</option>
+				<option value="Divorciado">Divorciado</option>
+				<option value="Viuvo">Viuvo</option>
+			</select>
+		</div>
+		<div class="col-xs-3 form-group">
+			Categoria 
+			<select name="categoria" class="form-control" [(ngModel)]="f.categoria">
+				<option value="Empregado">Empregado</option>
+				<option value="Empregador">Empregador</option>
+				<option value="Autônomo">Autônomo</option>
+				<option value="Outros">Outros</option>
+			</select>
+		</div>
+		<div class="col-xs-3 form-group">
+			Empresa:
+			<input type="text" name="empresa" class="form-control" [(ngModel)]="f.empresa">
+		</div>
+		<div class="col-xs-3 form-group">
+			Profissão: 
+			<input type="text" name="profissao" class="form-control" [(ngModel)]="f.profissao">
+		</div>
+		<div class="col-xs-3 form-group">
+			Renda Bruta: 
+			<input type="text" name="rendabruta" class="form-control" [(ngModel)]="f.rendabruta">
+		</div>	
+
+		<div class="col-xs-3 form-group">
+			Cep: 
+			<input type="text" name="cep" class="form-control" [(ngModel)]="e.cep"  (blur)="buscarCep()">
+		</div>
+		<div class="col-xs-6 form-group">
+			Logradouro: 
+			<input type="text" name="logradouro" class="form-control" [(ngModel)]="e.logradouro">
+		</div>
+		<div class="col-xs-3 form-group">
+			Número: 
+			<input type="text" name="numero" class="form-control" [(ngModel)]="e.numero">
+		</div>
+
+		
+		<div class="col-xs-3 form-group">
+			Complemento: 
+			<input type="text" name="complemento" class="form-control" [(ngModel)]="e.complemento">
+		</div>
+		<div class="col-xs-3 form-group">
+			Bairro: 
+			<input type="text" name="bairro" class="form-control" [(ngModel)]="e.bairro">
+		</div>
+		<div class="col-xs-3 form-group">
+			Cidade: 
+			<input type="text" name="cidade" class="form-control" [(ngModel)]="e.cidade">
+		</div>
+		<div class="col-xs-3 form-group">
+			Estado: 
+			<input type="text" name="estado" class="form-control" [(ngModel)]="e.estado">
+		</div>
+	</div>
+	<input type="submit" value="CADASTRAR FUNCIONÁRIO" class="btn btn-primary" (click)="cadastrarFuncionario()">
+</form>

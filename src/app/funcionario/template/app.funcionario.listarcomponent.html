@@ -1,0 +1,17 @@
+<h3 class="page-header">Listar Funcionarios</h3>
+<table class="table table-bordered">
+	<tr>
+		<th>NOME</th>
+		<th>CPF</th>
+		<th>CATEGORIA</th>
+		<th>CEP</th>
+		<th>LOGRADOURO</th>
+	</tr>
+	<tr *ngFor="let f of lista">
+		<td>{{ f.nome }}</td>
+		<td>{{ f.cpf }}</td>
+		<td>{{ f.categoria }}</td>
+		<td>{{ (f.endereco)?f.endereco.cep:'' }}</td>
+		<td>{{ (f.endereco)?f.endereco.logradouro:'' }}</td>
+	</tr>
+</table>
